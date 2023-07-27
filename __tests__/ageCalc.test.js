@@ -17,5 +17,10 @@ describe('Subject', () => {
     expect(subject.venusAge).toEqual(30 / .62);
   });
 
-  
+  test('should return user age in mars years', () => {
+    subject.calculateMarsAge();
+    expect(subject.marsAge).toEqual(30 / 1.88)
+  })
+
+
 })
