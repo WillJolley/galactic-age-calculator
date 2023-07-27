@@ -8,4 +8,8 @@ venusAge = 0;
 marsAge = 0;
 jupiterAge = 0;
 
+  calculateMercuryAge() {
+    return this.mercuryAge += this.earthAge / .24
+  }
+
 }
