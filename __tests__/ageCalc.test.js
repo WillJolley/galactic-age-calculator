@@ -9,6 +9,11 @@ describe('Subject', () => {
 
   test('should return user age in mercury years', () => {
     subject.calculateMercuryAge();
-    expect(subject.mercuryAge).toEqual(30 / .24)
+    expect(subject.mercuryAge).toEqual(30 / .24);
   });
+
+  test('should return user age in venus years', () => {
+    subject.calculateVenusAge();
+    expect(subject.venusAge).toEqual(30 / .62);
+  })
 })
