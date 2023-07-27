@@ -20,4 +20,8 @@ jupiterAge = 0;
     this.marsAge += this.earthAge / 1.88;
   }
 
+  calculateJupiterAge() {
+    this.jupiterAge += this.earthAge / 11.86;
+  }
+
 }
