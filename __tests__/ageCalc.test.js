@@ -8,7 +8,7 @@ describe('Subject', () => {
   });
 
   test('should return user age in mercury years', () => {
-    //subject.calculateMercuryAge();
+    subject.calculateMercuryAge();
     expect(subject.mercuryAge).toEqual(30 / .24);
   });
 
@@ -52,5 +52,9 @@ describe('Subject', () => {
     expect(subject.jupYearsPassed).toEqual(1 / 11.86);
   });
 
+  test('should determine how many earth years will pass by a future birthday', () => {
+    subject.calcEarthYearsToPass();
+    expect(subject.earthYearsToPass).toEqual(51);
+  });
 
 })
