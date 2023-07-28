@@ -5,19 +5,10 @@ export default class Subject {
     this.futureBday = futureBday;
   }
 
-  calculateMercuryAge() {
+  calculateAges() {
     this.mercuryAge = this.earthAge / .24;
-  }
-
-  calculateVenusAge() {
     this.venusAge = this.earthAge / .62;
-  }
-
-  calculateMarsAge() {
     this.marsAge = this.earthAge / 1.88;
-  }
-
-  calculateJupiterAge() {
     this.jupiterAge = this.earthAge / 11.86;
   }
 
@@ -25,24 +16,22 @@ export default class Subject {
     this.earthYearsPassed = this.earthAge - this.pastBday;
   }
 
-  calcMercYearsPassed() {
+  calcYearsPassed() {
     this.mercYearsPassed = this.earthYearsPassed / .24;
-  }
-
-  calcVenusYearsPassed() {
     this.venusYearsPassed = this.earthYearsPassed / .62;
-  }
-
-  calcMarsYearsPassed() {
     this.marsYearsPassed = this.earthYearsPassed / 1.88;
-  }
-
-  calcJupYearsPassed() {
     this.jupYearsPassed = this.earthYearsPassed / 11.86;
-  }
+  } 
 
   calcEarthYearsToPass() {
     this.earthYearsToPass = this.futureBday - this.earthAge;
+  }
+
+  calcYearsToPass() {
+    this.mercYearsToPass = this.earthYearsToPass / .24;
+    this.venusYearsToPass = this.earthYearsToPass / .62;
+    this.marsYearsToPass = this.earthYearsToPass / 1.88;
+    this.jupYearsToPass = this.earthYearsToPass / 11.86;
   }
 
 }
