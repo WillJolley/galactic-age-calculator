@@ -42,5 +42,10 @@ describe('Subject', () => {
     expect(subject.venusYearsPassed).toEqual(1 / .62);
   });
 
+  test('should determine how many mars years have passed since a past birthday', () => {
+    subject.calcMarsYearsPassed();
+    expect(subject.marsYearsPassed).toEqual(1 / 1.88);
+  });
+
 
 })
