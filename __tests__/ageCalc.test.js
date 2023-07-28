@@ -32,5 +32,15 @@ describe('Subject', () => {
     expect(1);
   });
 
+  test('should determine how many mercury years have passed since a past birthday', () => {
+    subject.calcMercYearsPassed();
+    expect(1 / .24);
+  });
+
+  test('should determine how many venus years have passed since a past birthday', () => {
+    subject.calcVenusYearsPassed();
+    expect(1 / .62);
+  });
+
 
 })
