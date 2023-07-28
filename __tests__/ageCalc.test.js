@@ -1,7 +1,7 @@
 import Subject from '../src/ageCalc';
 
 describe('Subject', () => {
-  let subject = new Subject(30);
+  let subject = new Subject(30, 29, 81);
 
   test('should create a subject with user inputted age in earth years', () => {
     expect(subject.earthAge).toEqual(30);
@@ -20,12 +20,17 @@ describe('Subject', () => {
   test('should return user age in mars years', () => {
     subject.calculateMarsAge();
     expect(subject.marsAge).toEqual(30 / 1.88)
-  })
+  });
 
   test('should return user age in jupiter years', () => {
     subject.calculateJupiterAge();
     expect(subject.jupiterAge).toEqual(30 / 11.86);
-  })
+  });
+
+  test('should determine how many earth years have passed since a past birthday', () => {
+    subject.calcEarthYearsPassed();
+    expect(1);
+  });
 
 
 })
