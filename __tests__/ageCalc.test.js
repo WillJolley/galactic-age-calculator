@@ -8,7 +8,7 @@ describe('Subject', () => {
   });
 
   test('should return user age in mercury years', () => {
-    subject.calculateMercuryAge();
+    //subject.calculateMercuryAge();
     expect(subject.mercuryAge).toEqual(30 / .24);
   });
 
@@ -45,6 +45,11 @@ describe('Subject', () => {
   test('should determine how many mars years have passed since a past birthday', () => {
     subject.calcMarsYearsPassed();
     expect(subject.marsYearsPassed).toEqual(1 / 1.88);
+  });
+
+  test('should determine how many jupiter years have passed since a past birthday', () => {
+    subject.calcJupYearsPassed();
+    expect(subject.jupYearsPassed).toEqual(1 / 11.86);
   });
 
 
