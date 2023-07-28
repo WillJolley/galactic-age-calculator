@@ -37,5 +37,12 @@ export default class Subject {
     this.marsYearsPassed = this.earthYearsPassed / 1.88;
   }
 
+  calcJupYearsPassed() {
+    this.jupYearsPassed = this.earthYearsPassed / 11.86;
+  }
+
+  calcEarthYearsToPass() {
+    this.earthYearsToPass = this.futureBday - this.earthAge;
+  }
 
 }
