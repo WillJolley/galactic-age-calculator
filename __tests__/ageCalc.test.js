@@ -7,23 +7,11 @@ describe('Subject', () => {
     expect(subject.earthAge).toEqual(30);
   });
 
-  test('should return user age in mercury years', () => {
-    subject.calculateMercuryAge();
+  test('should return user age in mercury years, venus years, mars years, and jupiter years', () => {
+    subject.calculateAges();
     expect(subject.mercuryAge).toEqual(30 / .24);
-  });
-
-  test('should return user age in venus years', () => {
-    subject.calculateVenusAge();
     expect(subject.venusAge).toEqual(30 / .62);
-  });
-
-  test('should return user age in mars years', () => {
-    subject.calculateMarsAge();
-    expect(subject.marsAge).toEqual(30 / 1.88)
-  });
-
-  test('should return user age in jupiter years', () => {
-    subject.calculateJupiterAge();
+    expect(subject.marsAge).toEqual(30 / 1.88);
     expect(subject.jupiterAge).toEqual(30 / 11.86);
   });
 
@@ -32,23 +20,11 @@ describe('Subject', () => {
     expect(subject.earthYearsPassed).toEqual(1);
   });
 
-  test('should determine how many mercury years have passed since a past birthday', () => {
-    subject.calcMercYearsPassed();
+  test('should determine how many mercury years, venus years, mars years, and jupiter years have passed since a past birthday', () => {
+    subject.calcYearsPassed();
     expect(subject.mercYearsPassed).toEqual(1 / .24);
-  });
-
-  test('should determine how many venus years have passed since a past birthday', () => {
-    subject.calcVenusYearsPassed();
     expect(subject.venusYearsPassed).toEqual(1 / .62);
-  });
-
-  test('should determine how many mars years have passed since a past birthday', () => {
-    subject.calcMarsYearsPassed();
     expect(subject.marsYearsPassed).toEqual(1 / 1.88);
-  });
-
-  test('should determine how many jupiter years have passed since a past birthday', () => {
-    subject.calcJupYearsPassed();
     expect(subject.jupYearsPassed).toEqual(1 / 11.86);
   });
 
@@ -57,9 +33,12 @@ describe('Subject', () => {
     expect(subject.earthYearsToPass).toEqual(51);
   });
 
-  test('should determine how many mercury years will pass by a future birthday', () => {
-    subject.calcMercYearsToPass();
+  test('should determine how many mercury years, venus years, mars years, and jupiter years will pass by a future birthday', () => {
+    subject.calcYearsToPass();
     expect(subject.mercYearsToPass).toEqual(51 / .24);
+    expect(subject.venusYearsToPass).toEqual(51 / .62);
+    expect(subject.marsYearsToPass).toEqual(51 / 1.88);
+    expect(subject.jupYearsToPass).toEqual(51 / 11.86);
   });
 
 })
