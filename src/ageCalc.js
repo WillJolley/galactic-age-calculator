@@ -5,7 +5,6 @@ export default class Subject {
     this.futureBday = futureBday;
   }
 
-  pastDiff = this.earthAge - this.pastBday;
   futureDiff = this.futureBday - this.earthAge;
 
   calculateMercuryAge() {
@@ -25,7 +24,15 @@ export default class Subject {
   }
 
   calcEarthYearsPassed() {
-    this.earthYearsPassed = this.pastDiff;
+    this.earthYearsPassed = this.earthAge - this.pastBday;
+  }
+
+  calcMercYearsPassed() {
+    this.mercYearsPassed = this.earthYearsPassed / .24;
+  }
+
+  calcVenusYearsPassed() {
+    this.venusYearsPassed = this.earthYearsPassed / .62;
   }
 
 

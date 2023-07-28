@@ -29,17 +29,17 @@ describe('Subject', () => {
 
   test('should determine how many earth years have passed since a past birthday', () => {
     subject.calcEarthYearsPassed();
-    expect(1);
+    expect(subject.earthYearsPassed).toEqual(1);
   });
 
   test('should determine how many mercury years have passed since a past birthday', () => {
     subject.calcMercYearsPassed();
-    expect(1 / .24);
+    expect(subject.mercYearsPassed).toEqual(1 / .24);
   });
 
   test('should determine how many venus years have passed since a past birthday', () => {
     subject.calcVenusYearsPassed();
-    expect(1 / .62);
+    expect(subject.venusYearsPassed).toEqual(1 / .62);
   });
 
 
