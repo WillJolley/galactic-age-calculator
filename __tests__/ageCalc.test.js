@@ -57,4 +57,9 @@ describe('Subject', () => {
     expect(subject.earthYearsToPass).toEqual(51);
   });
 
+  test('should determine how many mercury years will pass by a future birthday', () => {
+    subject.calcMercYearsToPass();
+    expect(subject.mercYearsToPass).toEqual(51 / .24);
+  });
+
 })
