@@ -26,10 +26,11 @@ The galactice age calculator determines a user's "age" on Mercury, Venus, Mars, 
 * Have VS Code installed.
 * Clone this repository to your desktop. 
 * Open it in VS code. 
-* Navigate to the top level of the directory. 
+* Navigate to the root directory. 
 * From the root directory, run the following commands in your terminal: 
-* npm install
-* npm run build 
+*  to install dependencies: npm install
+*  to run the application: npm run build 
+*  to run tests: npm test
 
 
 ## Known Bugs
